@@ -1,0 +1,9 @@
+<?php
+// Cek apakah parameter 'nama' ada di URL
+if (isset($_GET['nama'])) {
+    $nama = htmlspecialchars($_GET['nama']); // Sanitasi input untuk keamanan
+    echo "Halo, $nama!";
+} else {
+    echo "Halo, silakan masukkan nama pada URL. Contoh: ?nama=Andi";
+}
+?>
