@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Form Input</title>
+</head>
+<body>
+
+<form method="post" action="">
+    Nama: <input type="text" name="nama">
+    <input type="submit" value="Kirim">
+</form>
+
+<?php
+if (isset($_POST['nama'])) {
+    $nama = $_POST['nama'];
+    echo "Halo, " . htmlspecialchars($nama);
+} else {
+    echo "Nama belum diisi";
+}
+?>
+
+</body>
+</html>
